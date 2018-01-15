@@ -1,6 +1,16 @@
 import hashlib
 
 
+#Bitcoin Block Hash consists of
+#   Bitcoin Version
+#   Previous BlockHash
+#   Merkle Root : Hash of Hashes
+#   Timestamp
+#   Difficulty Target
+#   Nonce: What we are trying to guess
+# once solved miner hashes the header twice with SHA256 to become the new current block hash
+# https://www.youtube.com/watch?v=RPP2f_Fn8iQ
+
 my_string = 'Hello World!'
 my_string_hash = hashlib.sha256(my_string.encode('utf-8')).hexdigest()
 # nonce = str(1)
